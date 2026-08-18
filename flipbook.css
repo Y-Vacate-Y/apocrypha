@@ -1,0 +1,120 @@
+
+input{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+            
+.torimidose {
+    display: flex;
+    align-items: center;
+}
+
+.flipper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 300px;
+}
+
+.flipper img{
+    width: 500px;
+    display: block;
+}
+
+#cover{
+    width: 500px;
+}
+
+.flbook{
+    width: 500px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.flip{
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 0.4s;
+            }
+
+.front{
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    border-right: 2px solid #000;
+}
+
+.back{
+    width: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    border-left: 2px solid #000;
+}
+
+#pg1 { z-index: 12; }
+#pg2 { z-index: 11; }
+#pg3 { z-index: 10; }
+#pg4 { z-index: 9; }
+#pg5 { z-index: 8; }
+#pg6 { z-index: 7; }
+#pg7 { z-index: 6; }
+#pg8 { z-index: 5; }
+#pg9 { z-index: 4; }
+#pg10 { z-index: 3; }
+#pg11 { z-index: 2; }
+#pg12 { z-index: 1; }
+
+
+
+#f1:checked ~ .flbook #pg1{transform: rotateY(180deg); z-index: 1;}
+#f2:checked ~ .flbook #pg2{transform: rotateY(180deg); z-index: 2;}
+#f3:checked ~ .flbook #pg3{transform: rotateY(180deg); z-index: 3;}
+#f4:checked ~ .flbook #pg4{transform: rotateY(180deg); z-index: 4;}
+#f5:checked ~ .flbook #pg5{transform: rotateY(180deg); z-index: 5;}
+#f6:checked ~ .flbook #pg6{transform: rotateY(180deg); z-index: 6;}
+#f7:checked ~ .flbook #pg7{transform: rotateY(180deg); z-index: 7;}
+#f8:checked ~ .flbook #pg8{transform: rotateY(180deg); z-index: 8;}
+#f9:checked ~ .flbook #pg9{transform: rotateY(180deg); z-index: 9;}
+#f10:checked ~ .flbook #pg10{transform: rotateY(180deg); z-index: 10;}
+#f11:checked ~ .flbook #pg11{transform: rotateY(180deg); z-index: 11;}
+#f12:checked ~ .flbook #pg12{transform: rotateY(180deg); z-index: 12;}
+
+
+.next-btn, .back-btn {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 50;
+    cursor: pointer;
+    background: transparent;
+    font-size: 0;
+    color: transparent;
+}
+
+.next-btn {
+    left: 0;
+}
+
+.back .back-btn {
+    left: auto;
+    right: 0;
+}
