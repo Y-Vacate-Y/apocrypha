@@ -50,6 +50,20 @@ nav a:hover {
     border-bottom: 2px solid white;
 }
 
+footer {
+    position: relative;
+    width:20%;
+    object-position: center;
+    bottom: 20px;
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    padding: 5px;
+    box-shadow: 7px 10px 0px #ff0054;
+    left: 41%;
+    margin-top: 80px;
+}
+
 .comics {
     width: 70%;
     display: flex;
@@ -378,3 +392,26 @@ readnav img:hover{
     right: 0;
     width: 30%;
 }
+
+/* [-ZETA-] */
+
+@media (max-width: 1000px) {
+    .lc {
+        display: block;
+    }
+    .leftcr{
+        display: block;
+    }
+    .rightcr{
+        display: block;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+                .pagin{
+                    display: block;
+                    text-align: center;
+                    font-size: 30px;
+                }
+            }
